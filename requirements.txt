@@ -1,0 +1,6 @@
+Flask
+fairseq
+zmq
+SoundFile
+packaging
+ffmpeg-python
