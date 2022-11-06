@@ -1,12 +1,7 @@
-from flask import Flask, render_template, request
-import time, tempfile, os
-import preprocess, zmq
+from flask import Flask, request
+import tempfile, preprocess, zmq
 
 app = Flask(__name__)
-
-@app.route('/')
-def serve():
-    return render_template('demo.html')
 
 @app.route('/upload',methods=['POST'])
 def process():
