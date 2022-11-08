@@ -1,5 +1,4 @@
 Flask
-fairseq
 zmq
 SoundFile
 packaging
