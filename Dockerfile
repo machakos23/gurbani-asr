@@ -2,9 +2,7 @@
 
 FROM alpine as builder
 RUN apk --update --no-cache add git gcc make g++ zlib-dev cmake boost-system boost-thread boost-program_options boost-dev eigen-dev zlib-dev bzip2-dev xz-libs
-RUN git clone https://github.com/kpu/kenlm
-RUN cd kenlm && mkdir -p build && cd build && cmake .. && make -j `nproc`
-RUN git clone https://github.com/FFTW/fftw3 && cd fftw3 && mkdir build && cd build && cmake ..
+RUN git clone https://github.com/kpu/kenlm && cd kenlm && mkdir -p build && cd build && cmake .. && make -j `nproc`
 
 FROM python:3.8
 WORKDIR /app
